@@ -248,11 +248,11 @@ WHERE NOT EXISTS (
 
 -- --- BEGIN op 332 ( update quality_profile "[German] HD Bluray + WEB" )
 INSERT INTO quality_profile_custom_formats (quality_profile_name, custom_format_name, arr_type, score)
-SELECT '[German] HD Bluray + WEB', 'NOT: IMAX Enhanced', 'radarr', 800
+SELECT '[German] HD Bluray + WEB', 'IMAX Enhanced', 'radarr', 800
 WHERE NOT EXISTS (
   SELECT 1 FROM quality_profile_custom_formats
   WHERE quality_profile_name = '[German] HD Bluray + WEB'
-    AND custom_format_name = 'NOT: IMAX Enhanced'
+    AND custom_format_name = 'IMAX Enhanced'
     AND arr_type = 'radarr'
 );
 -- --- END op 332
